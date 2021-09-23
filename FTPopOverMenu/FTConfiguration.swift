@@ -32,6 +32,8 @@ public class FTConfiguration: NSObject {
     public var textFont: UIFont = UIFont.systemFont(ofSize: 14)
     public var textAlignment: NSTextAlignment = NSTextAlignment.left
     public var ignoreImageOriginalColor = false
+    public var cellMargin: CGFloat = FT.DefaultCellMargin
+    public var cellIconSpace: CGFloat = FT.DefaultCellIconSpace
     public var menuIconSize: CGFloat = FT.DefaultMenuIconSize
     
     public var selectedTextColor: UIColor = UIColor.darkText

@@ -10,7 +10,8 @@ import UIKit
 
 struct FT {
     internal static let DefaultMargin = CGFloat(4)
-    internal static let DefaultCellMargin = CGFloat(6)
+    internal static let DefaultCellMargin = CGFloat(20)
+    internal static let DefaultCellIconSpace = CGFloat(12)
     internal static let DefaultMenuIconSize = CGFloat(24)
     internal static let DefaultMenuCornerRadius = CGFloat(4)
     internal static let DefaultMenuArrowWidth = CGFloat(8)

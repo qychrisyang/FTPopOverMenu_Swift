@@ -32,7 +32,7 @@ class FTPopOverMenuCell: UITableViewCell {
         nameLabel.font = configuration.textFont
         nameLabel.textColor = configuration.textColor
         nameLabel.textAlignment = configuration.textAlignment
-        nameLabel.frame = CGRect(x: FT.DefaultCellMargin, y: 0, width: configuration.menuWidth - FT.DefaultCellMargin*2, height: configuration.menuRowHeight)
+        nameLabel.frame = CGRect(x: configuration.cellMargin, y: 0, width: configuration.menuWidth - configuration.cellMargin*2, height: configuration.menuRowHeight)
         
         var iconImage: UIImage? = nil
         if menuName is String {
@@ -53,9 +53,9 @@ class FTPopOverMenuCell: UITableViewCell {
                 iconImage = iconImage?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
             }
             iconImageView.tintColor = configuration.textColor
-            iconImageView.frame =  CGRect(x: FT.DefaultCellMargin, y: (configuration.menuRowHeight - configuration.menuIconSize)/2, width: configuration.menuIconSize, height: configuration.menuIconSize)
+            iconImageView.frame =  CGRect(x: configuration.cellMargin, y: (configuration.menuRowHeight - configuration.menuIconSize)/2, width: configuration.menuIconSize, height: configuration.menuIconSize)
             iconImageView.image = iconImage
-            nameLabel.frame = CGRect(x: FT.DefaultCellMargin*2 + configuration.menuIconSize, y: (configuration.menuRowHeight - configuration.menuIconSize)/2, width: (configuration.menuWidth - configuration.menuIconSize - FT.DefaultCellMargin*3), height: configuration.menuIconSize)
+            nameLabel.frame = CGRect(x: configuration.cellMargin + configuration.menuIconSize + configuration.cellIconSpace, y: (configuration.menuRowHeight - configuration.menuIconSize)/2, width: (configuration.menuWidth - configuration.menuIconSize - configuration.cellIconSpace - configuration.cellMargin*2), height: configuration.menuIconSize)
         }
     }
 }
